@@ -24,8 +24,5 @@ cd ghc-7.8.3
 
 patch -p1 < ../D69_simplified.diff
 
-cp mk/build.mk.sample mk/build.mk
-sed -i '21s;#;;' mk/build.mk
-
 ./configure --prefix="$PREFIX"
 make -j"$JOBS"
