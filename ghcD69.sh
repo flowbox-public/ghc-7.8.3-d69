@@ -1,5 +1,7 @@
 #!/bin/bash
 
+type patch  >/dev/null 2>&1 || { echo >&2 "I require patch but it's not installed. Aborting."; exit 1; }
+
 for i in "$@"
 do
     case $i in
